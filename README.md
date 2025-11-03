@@ -32,3 +32,13 @@ La configuración de la base de datos se recomienda que se hagan las primeras ya
 Para entrar en la configuración de la base de datos simplemente tenemos que poner el comando ```sudo mariadb -u root``` entrando así como usuario raíz añadir bases de datos, administrar ususarios, entre otras funciones. Para crear la base de datos se usa el comando ```CREATE DATABASE <NOMBRE DE LA BASE DE DATOS>;```.
 
 <img width="997" height="288" alt="imagen" src="https://github.com/user-attachments/assets/2622215a-9fb8-4e81-9558-a30787c91f3b" />
+
+Se creará una tabla dentro de la base de datos que hemos creado previamente usando los comando ```CREATE TABLE <NOMBRE TABLA>``` y añadimos todos los atributos.
+
+<img width="1275" height="392" alt="imagen" src="https://github.com/user-attachments/assets/4e2665e2-9f98-4172-b923-a4ac36d0d2a1" />
+
+Se crearan más usuarios para la base de datos dentro de la máquina usando ```CREATE USER '<NOMBRE USUSARIO>'@'localhost'```
+<img width="687" height="46" alt="imagen" src="https://github.com/user-attachments/assets/b10acae8-7cf5-48b9-aef7-2b1d768103a3" />
+
+Hay que añadir un par de empleados en la tabla.
+<img width="988" height="117" alt="imagen" src="https://github.com/user-attachments/assets/04509052-3b90-4fa8-993f-0d48135a2bfb" />
