@@ -15,7 +15,12 @@ Vagrant fue creado para la optimización de crecación y administración de máq
 ## **3. CONFIGURACIÓN VAGRANTFILE**
 
 En este apartado se enseñaran que en el vagrantfile que se ha configurado se han hecho dos máquinas distintas, una que servirá para configurar los servicios de apache y esta tendría acceso a internet y la otra se usaría para los servicios de la base de dato y no tendría acceso a internet. Tambiém se han añadido dos scripts, una para cada máquina, que harán que se instalen los servicios y se automatice el lanzamiento de esta.
+<img width="962" height="486" alt="Captura de pantalla 2025-11-03 184424" src="https://github.com/user-attachments/assets/5b8c650f-91ec-4a9d-9f9b-53a0dba7a988" />
 
-<img width="992" height="627" alt="Captura de pantalla 2025-11-03 201349" src="https://github.com/user-attachments/assets/da079430-7793-49fb-9bde-f9c1efab7cfd" />
+## **CONFIGURACIÓN MÁQUINAS**
 
-## ****
+
+Se empezará primero con la de apache, ya que la máquina de la base de datos, se ha configurado su enrutamiento dentro del script que le hemos añadido.
+Primero se entra en el archivo donde se encuentra la configuración NAT, para ello usaremos ```sudo nano /etc/sysctl.conf```. Una vez dentro del archivo, se descomentará la línia ```net.ipv4.ip_forward=1```. Después se usará el comando ```sudo sysctl -p``` para aplicar los cambios sin necesidad de reiniciar la máquina.
+<img width="992" height="627" alt="Captura de pantalla 2025-11-03 201349" src="https://github.com/user-attachments/assets/8b00592c-1d2d-469d-b632-cea0cccbbfc8" />
+
