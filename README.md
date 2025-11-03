@@ -7,7 +7,9 @@
 2. [INTRODUCCIÓN]()
 3. [CONFIGURACIÓN VAGRANTFILE]()
 4. [CONFIGURACIÓN MÁQUINAS]()
-5. [CONFIGURACION BASE DE DATOS]
+5. [CONFIGURACION BASE DE DATOS]()
+6. [CONFIGURACIÓN APACHE]()
+7. [ÚLTIMOS RETOQUES]()
 
 ## **2. INTRODUCCIÓN**
 Vagrant fue creado para la optimización de crecación y administración de máquinas virtuales usando software, simplificando el proceso. En esta práctica se tiene como objetivo la creación y configuración de una pila LAMP. 
@@ -42,3 +44,18 @@ Se crearan más usuarios para la base de datos dentro de la máquina usando ```C
 
 Hay que añadir un par de empleados en la tabla.
 <img width="988" height="117" alt="imagen" src="https://github.com/user-attachments/assets/04509052-3b90-4fa8-993f-0d48135a2bfb" />
+
+## **6. CONFIGURACIÓN APACHE**
+
+Se pasa ahora a la configuración de apache para el lanzamiento de la aplicación web. Para ello hay que acceder a ```/etc/apache2/sites-availables```donde nos encontraremos con el archivo 000-default.config y se le hará una copia para poder realizar desde ahí la configuración. Es importante hacer las configuraciones de apache dentro de la copia, ya que si se corrompe o falla.
+
+Usando la configuración del balanceador, primero hay que descargarse los 3 modificadores de proxy para la configuración. Luego se tiene que acceder a la máquina de la base de datos y salir las tablas. Se tiene que habilitar la página usando el comando ```sudo a2ensite trabajo.config``` y luego recargar los servicios de apache con ```sudo systemctl reload apache2.service``` y comprobar que funciona.
+
+<img width="937" height="613" alt="imagen" src="https://github.com/user-attachments/assets/3d36f880-5815-4714-a09c-9a3964a5c3ff" />
+
+##**7. ÚLTIMOS RETOQUES**
+Para los últimos retoques, lo que hay que hacer es instalar PHP y apache en la máquina de la base de datos, para poder acceder a ella a través del navegador. Hay que configurar como en la otra máquina para poder llegar a ella.
+
+<img width="664" height="286" alt="imagen" src="https://github.com/user-attachments/assets/869fff14-0d4d-49dc-b5d7-b631bb03257c" />
+
+Y al final comprobamos de que la máquina funciona entrando al navegador 
