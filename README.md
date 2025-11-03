@@ -18,10 +18,17 @@ En este apartado se enseñaran que en el vagrantfile que se ha configurado se ha
 <img width="885" height="317" alt="imagen" src="https://github.com/user-attachments/assets/922dcb08-990b-4578-9e9d-d726a705822a" />
 
 
-## **CONFIGURACIÓN MÁQUINAS**
+## **4. CONFIGURACIÓN MÁQUINAS**
 
 
 Se empezará primero con la de apache, ya que la máquina de la base de datos, se ha configurado su enrutamiento dentro del script que le hemos añadido.
-Primero se entra en el archivo donde se encuentra la configuración NAT, para ello usaremos ```sudo nano /etc/sysctl.conf```. Una vez dentro del archivo, se descomentará la línia ```net.ipv4.ip_forward=1```. Después se usará el comando ```sudo sysctl -p``` para aplicar los cambios sin necesidad de reiniciar la máquina.
+Primero se entra en el archivo donde se encuentra la configuración NAT, para ello usaremos ```sudo nano /etc/sysctl.conf```. Una vez dentro del archivo, se descomentará la línea ```net.ipv4.ip_forward=1```. Después se usará el comando ```sudo sysctl -p``` para aplicar los cambios sin necesidad de reiniciar la máquina.
+
 <img width="992" height="627" alt="Captura de pantalla 2025-11-03 201349" src="https://github.com/user-attachments/assets/8b00592c-1d2d-469d-b632-cea0cccbbfc8" />
 
+##**5. CONFIGURACIÓN BASE DE DATOS**
+
+La configuración de la base de datos se recomienda que se hagan las primeras ya que las configuraciones de PHP vienen de como llamamos a la base de datos, donde se encuentra, etc. 
+Para entrar en la configuración de la base de datos simplemente tenemos que poner el comando ```sudo mariadb -u root``` entrando así como usuario raíz añadir bases de datos, administrar ususarios, entre otras funciones. Para crear la base de datos se usa el comando ```CREATE DATABASE <NOMBRE DE LA BASE DE DATOS>;```.
+
+<img width="997" height="288" alt="imagen" src="https://github.com/user-attachments/assets/2622215a-9fb8-4e81-9558-a30787c91f3b" />
