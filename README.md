@@ -15,7 +15,8 @@ Vagrant fue creado para la optimización de crecación y administración de máq
 ## **3. CONFIGURACIÓN VAGRANTFILE**
 
 En este apartado se enseñaran que en el vagrantfile que se ha configurado se han hecho dos máquinas distintas, una que servirá para configurar los servicios de apache y esta tendría acceso a internet y la otra se usaría para los servicios de la base de dato y no tendría acceso a internet. Tambiém se han añadido dos scripts, una para cada máquina, que harán que se instalen los servicios y se automatice el lanzamiento de esta.
-<img width="962" height="486" alt="Captura de pantalla 2025-11-03 184424" src="https://github.com/user-attachments/assets/5b8c650f-91ec-4a9d-9f9b-53a0dba7a988" />
+<img width="885" height="317" alt="imagen" src="https://github.com/user-attachments/assets/922dcb08-990b-4578-9e9d-d726a705822a" />
+
 
 ## **CONFIGURACIÓN MÁQUINAS**
 
